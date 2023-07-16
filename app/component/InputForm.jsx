@@ -24,6 +24,8 @@ const InputForm = ({onSelectTreeCount}) => {
     <div className="bg-white shadow-md bg-tertiary rounded p-8 max-w-md flex items-center flex-col">
     <span className="text-2xl font-extrabold">JOIN #TEAMTREES!</span>
     <span className="font-bold">$1 plants a tree</span>
+    <br/>
+    <br/>
     <form >
       <div className="mb-2 mt-2 grid grid-cols-2 gap-2">
         {TREES_COUNT.map( item => 
