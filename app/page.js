@@ -1,7 +1,7 @@
 'use client';
 import InputForm from "./component/InputForm";
 import axios from "axios";
-import Card from "./component/card";
+import Card from "./component/Card";
 import { useEffect, useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
