@@ -14,7 +14,7 @@ export async function GET(request) {
           }
     });
     const session = await stripe.checkout.sessions.create({
-        cancel_url: 'http://localhost:3000',
+        cancel_url: process.env.REDIRECT_URL,
         line_items: [
           {
             price: price.id,
@@ -22,8 +22,7 @@ export async function GET(request) {
           },
         ],
         mode: 'payment',
-        success_url: 'http://localhost:3000',
+        success_url: process.env.REDIRECT_URL,
       });
-    console.log(session.url)
     return NextResponse.json(session.url,{status:200})
 }
