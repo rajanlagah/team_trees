@@ -18,7 +18,11 @@ export default function Home() {
 
   const fetchAllTransactions = async (price) => {
     // fetch(`/api/payment?price=${[price]}`)
-    const { data } = await axios(`/api/transactions`)
+    const { data } = await axios(`/api/transactions`,{
+      headers:{
+        'Cache-Control': 'no-cache'
+      }
+    })
     setTransactions(data)
   }
 
