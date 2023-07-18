@@ -5,7 +5,7 @@ import Stripe from "stripe";
 export async function GET(request){
     const stripe = new Stripe(process.env.STRIPE_API_KEY)
     const params = {
-        limit: 10
+        limit: 8
       };
       const path = request.nextUrl.searchParams.get('/path') || '/'
       revalidatePath(path)
